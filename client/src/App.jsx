@@ -1,13 +1,14 @@
 
-import './App.css'
+
 
 function App() {
  
 
   return (
     <>
-      <div>
-        
+      <div className="container mx-auto">
+        <h1 className="text-4xl font-bold">Welcome to Portiflex</h1>
+        <p className="mt-4 text-red-50">Your one-stop solution for all your portfolio needs.</p>
       </div>
     </>
   )
