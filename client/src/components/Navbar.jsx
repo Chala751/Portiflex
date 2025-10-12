@@ -2,45 +2,54 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  // initial profile (placeholder)
   const [profile, setProfile] = useState({
     name: "Chala Temesgen",
     title: "Full Stack Developer",
-    image: "/assets/profile.jpg", // make sure it exists in src/assets
+    image: "/assets/profile.jpg",
   });
 
-  // handle file selection
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      const imageUrl = URL.createObjectURL(file); // create temporary image URL
+      const imageUrl = URL.createObjectURL(file);
       setProfile((prev) => ({ ...prev, image: imageUrl }));
     }
   };
 
   return (
-    <nav className="bg-white shadow">
+    <nav className="bg-gray-900 shadow-md py-4 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Left Section (Links) */}
+          {/* Left Section - Logo + Links */}
           <div className="flex items-center space-x-6">
-            <Link to="/" className="text-gray-900 hover:text-gray-700 font-medium">
-              Home
+            <Link
+              to="/"
+              className="text-white font-bold text-lg hover:text-yellow-300 transition duration-200"
+            >
+              Portiflex
             </Link>
-            <Link to="/about" className="text-gray-900 hover:text-gray-700 font-medium">
+            <Link
+              to="/about"
+              className="text-white hover:text-yellow-300 transition duration-200 font-medium"
+            >
               About
             </Link>
-            <Link to="/projects" className="text-gray-900 hover:text-gray-700 font-medium">
+            <Link
+              to="/projects"
+              className="text-white hover:text-yellow-300 transition duration-200 font-medium"
+            >
               Projects
             </Link>
-            <Link to="/contact" className="text-gray-900 hover:text-gray-700 font-medium">
+            <Link
+              to="/contact"
+              className="text-white hover:text-yellow-300 transition duration-200 font-medium"
+            >
               Contact
             </Link>
           </div>
 
-          {/* Right Section (Profile Info) */}
+          {/* Right Section - Profile */}
           <div className="flex items-center space-x-3">
-            {/* Hidden file input */}
             <input
               type="file"
               accept="image/*"
@@ -48,18 +57,15 @@ const Navbar = () => {
               className="hidden"
               onChange={handleImageChange}
             />
-
-            {/* Clickable profile image */}
             <img
               src={profile.image}
               alt={profile.name}
-              className="w-10 h-10 rounded-full object-cover border border-gray-300 cursor-pointer hover:opacity-80 transition"
               onClick={() => document.getElementById("profileImageInput").click()}
+              className="w-12 h-12 rounded-full object-cover border-2 border-white shadow-md cursor-pointer hover:scale-110 transition-transform duration-200"
             />
-
             <div className="flex flex-col text-right">
-              <span className="text-gray-800 font-semibold">{profile.name}</span>
-              <span className="text-sm text-gray-500">{profile.title}</span>
+              <span className="text-white font-semibold">{profile.name}</span>
+              <span className="text-sm text-white/80">{profile.title}</span>
             </div>
           </div>
         </div>
