@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Laptop, Code, Globe } from "lucide-react";
+import { ArrowRight, Laptop, Code, Globe, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -115,30 +115,35 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ===== Call to Action / Footer Section ===== */}
-      <section className="py-20 px-6 text-center bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+      {/* ===== Contact / Call to Action Section ===== */}
+      <section className="relative py-24 px-6 text-center overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 dark:from-blue-800 dark:via-blue-900 dark:to-gray-950">
+        {/* Soft Glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15)_0%,transparent_70%)] pointer-events-none" />
+
         <motion.h2
           initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold mb-6"
+          className="text-3xl md:text-4xl font-bold mb-6 text-white"
         >
-          Ready to Collaborate or Hire Me?
+          Let’s <span className="text-blue-200">Build Something Great</span> Together
         </motion.h2>
+
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="mb-8 max-w-2xl mx-auto text-lg"
+          className="mb-8 max-w-2xl mx-auto text-lg text-blue-100"
         >
-          Let’s connect and build something impactful together. I’m always open to freelance,
-          internships, and exciting project opportunities.
+          I’m always open to collaboration, internships, or new development opportunities.
+          Let’s turn your idea into a real-world application.
         </motion.p>
+
         <Link
           to="/contact"
-          className="inline-block bg-white text-blue-700 font-semibold px-8 py-3 rounded-full shadow hover:bg-blue-50 transition"
+          className="inline-flex items-center gap-2 bg-white text-blue-700 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-blue-50 transition duration-300"
         >
-          Contact Me
+          <Send size={20} /> Contact Me
         </Link>
       </section>
     </main>
