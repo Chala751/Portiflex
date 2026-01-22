@@ -1,22 +1,64 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+
+const GITHUB_URL = "https://github.com/Chala751";
+
 
 const projects = [
   {
     title: "Campus Bites",
-    description: "A campus food ordering system connecting students with nearby hotels for faster delivery.",
+    description:
+      "A campus food ordering system connecting students with nearby hotels for fast, reliable delivery.",
     tech: ["React Native", "Appwrite", "Tailwind"],
   },
   {
     title: "Employee Management System",
-    description: "A Next.js + MySQL app for managing employee records, attendance, and roles.",
+    description:
+      "A full-featured Next.js application for managing employees, attendance, and role-based access control.",
     tech: ["Next.js", "MySQL", "NextAuth", "Tailwind"],
   },
   {
     title: "VoteApp",
-    description: "A simple web app allowing users to vote once between Ronaldo and Messi.",
+    description:
+      "A lightweight web app where users can vote once between Ronaldo and Messi with real-time results.",
     tech: ["Next.js", "MongoDB", "TypeScript"],
   },
+
+  // ===== AI & Automation Projects =====
+  {
+    title: "Repair-Fix Assistant AI Agent",
+    description:
+      "An AI-powered repair assistant that diagnoses issues and suggests fixes using intelligent agent workflows.",
+    tech: ["FastAPI", "LangGraph", "PostgreSQL", "Next.js"],
+  },
+  {
+    title: "SQL Query AI Agent",
+    description:
+      "An AI agent that converts natural language into optimized SQL queries using agent-based reasoning.",
+    tech: ["FastAPI", "LangGraph", "PostgreSQL"],
+  },
+  {
+    title: "Ask-Me (RAG System)",
+    description:
+      "A Retrieval-Augmented Generation (RAG) application that answers questions from custom knowledge sources.",
+    tech: ["MERN Stack", "RAG", "Vector Search"],
+  },
+
+  // ===== Full Stack Web Apps =====
+  {
+    title: "PERN Stack Application",
+    description:
+      "A production-ready PERN application using Prisma ORM and Neon-hosted PostgreSQL.",
+    tech: ["PostgreSQL", "Neon", "Prisma", "Express", "React"],
+  },
+  {
+    title: "Live Football Scores",
+    description:
+      "A real-time football score application using Server-Sent Events (SSE) for live match updates.",
+    tech: ["MERN Stack", "Server-Sent Events", "API"],
+  },
 ];
+
 
 const Projects = () => {
   return (
@@ -56,6 +98,28 @@ const Projects = () => {
           </motion.div>
         ))}
       </div>
+      {/* ===== GitHub CTA ===== */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.6 }}
+        className="mt-16"
+      >
+        <p className="text-gray-700 dark:text-gray-300 text-lg mb-4">
+          Want to explore more projects, experiments, and open-source work?
+        </p>
+
+        <a
+          href={GITHUB_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-6 py-3 rounded-full bg-blue-600 text-white font-semibold
+               hover:bg-blue-700 transition shadow-md"
+        >
+          Visit My GitHub →
+        </a>
+      </motion.div>
+
     </section>
   );
 };
