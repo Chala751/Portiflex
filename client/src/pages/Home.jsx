@@ -28,9 +28,13 @@ const Home = () => {
           className="text-gray-700 dark:text-gray-300 max-w-2xl mb-10 text-lg"
         >
           A passionate <strong>Full Stack Developer</strong> and Software Engineering student at{" "}
-          <strong>ASTU</strong>. I build scalable web apps using{" "}
-          <span className="text-blue-600 dark:text-blue-400">MERN Stack, Next.js,</span> and{" "}
-          <span className="text-blue-600 dark:text-blue-400">React</span>.
+          <strong>ASTU</strong>. I build scalable web applications using{" "}
+          <span className="text-blue-600 dark:text-blue-400">
+            MERN & PERN stacks, Next.js, React
+          </span>, and develop{" "}
+          <span className="text-blue-600 dark:text-blue-400">
+            AI-powered solutions including RAG systems, autonomous agents, and AI automation
+          </span>.
         </motion.p>
 
         <motion.div
@@ -40,7 +44,7 @@ const Home = () => {
         >
           <Link
             to="/projects"
-            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition duration-300"
+            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition duration-300 cursor-pointer"
           >
             View My Work <ArrowRight size={20} />
           </Link>
@@ -50,8 +54,9 @@ const Home = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 0.2, y: 0 }}
           transition={{ delay: 0.5, duration: 1.5 }}
-          className="absolute -bottom-12 left-0 right-0 flex justify-center"
+          className="absolute -bottom-12 left-0 right-0 flex justify-center pointer-events-none"
         >
+
           <div className="w-80 h-80 bg-blue-300 rounded-full blur-3xl opacity-30 dark:opacity-20" />
         </motion.div>
       </section>
@@ -95,7 +100,7 @@ const Home = () => {
               desc: "Creating user-centered designs that work seamlessly across all devices.",
             },
           ].map((item, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
