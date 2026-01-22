@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { ArrowRight, Laptop, Code, Globe, Send } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -94,7 +95,7 @@ const Home = () => {
               desc: "Creating user-centered designs that work seamlessly across all devices.",
             },
           ].map((item, i) => (
-            <motion.div
+            <motion.div 
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
