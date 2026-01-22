@@ -1,11 +1,35 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Code2, Server, Palette, Rocket } from "lucide-react";
 
 const skills = [
-  "React.js", "Next.js", "Node.js", "Express.js",
-  "MongoDB", "Tailwind CSS", "TypeScript",
-  "Framer Motion", "REST APIs", "MySQL",
+  // Frontend
+  "JavaScript",
+  "React.js",
+  "Next.js",
+  "Tailwind CSS",
+  "Framer Motion",
+
+  // Backend
+  "Node.js",
+  "Express.js",
+  "Python",
+  "FastAPI",
+
+  // Databases
+  "MongoDB",
+  "PostgreSQL",
+  "Neon",
+  "MySQL",
+
+  // APIs & Automation
+  "REST APIs",
+  "n8n",
+
+  // Others
+  "TypeScript",
 ];
+
 
 const About = () => {
   return (
@@ -21,22 +45,41 @@ const About = () => {
       </motion.h2>
 
       {/* ===== Intro Paragraph ===== */}
+      {/* ===== Intro Paragraph ===== */}
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.8 }}
         className="text-gray-700 dark:text-gray-300 max-w-3xl text-lg leading-relaxed mb-12"
       >
-        Hi 👋 I’m <span className="font-semibold text-blue-600 dark:text-blue-400">Chala Temesgen</span>,
-        a passionate <strong>Full Stack Developer</strong> specialized in building 
-        powerful and scalable web applications using the{" "}
-        <span className="font-semibold">MERN Stack</span> and{" "}
-        <span className="font-semibold">Next.js</span>.
-        <br />I’m currently studying Software Engineering at{" "}
-        <strong>Adama Science and Technology University (ASTU)</strong>.
-        <br />I love transforming complex ideas into beautiful, interactive, and
-        high-performing web experiences.
+        Hi 👋 I’m{" "}
+        <span className="font-semibold text-blue-600 dark:text-blue-400">
+          Chala Temesgen
+        </span>
+        , a <strong>Full Stack Developer</strong> who loves turning ideas into fast,
+        scalable, and impactful digital products.
+        <br />
+        <br />
+        I specialize in building modern web applications using{" "}
+        <span className="font-semibold">MERN & PERN stacks</span>,{" "}
+        <span className="font-semibold">Next.js</span>, and cutting-edge frontend
+        technologies — always with performance, usability, and clean design in mind.
+        <br />
+        <br />
+        Beyond traditional web development, I’m deeply interested in{" "}
+        <strong>AI-driven innovation</strong>. I design{" "}
+        <span className="font-semibold">RAG-based systems</span>,{" "}
+        <span className="font-semibold">autonomous AI agents</span>, and{" "}
+        <span className="font-semibold">end-to-end AI automation workflows</span> that
+        help businesses work smarter and scale faster.
+        <br />
+        <br />
+        Currently, I’m studying <strong>Software Engineering</strong> at{" "}
+        <strong>Adama Science and Technology University (ASTU)</strong>, where I
+        continuously sharpen my skills and explore the future of intelligent software.
       </motion.p>
+
+
 
       {/* ===== What I Do Section ===== */}
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mb-16">
@@ -49,7 +92,7 @@ const About = () => {
           {
             icon: <Server className="w-10 h-10 text-blue-600" />,
             title: "Backend Engineering",
-            desc: "Building robust REST APIs with Node.js, Express, and MongoDB — ensuring scalability and performance.",
+            desc: "Building robust REST APIs with Node.js, Express, and MongoDB ,Neon Postgresql, Fastapi — ensuring scalability and performance.",
           },
           {
             icon: <Palette className="w-10 h-10 text-blue-600" />,
