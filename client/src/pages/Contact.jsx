@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone } from "lucide-react";
 
@@ -25,7 +26,7 @@ const Contact = () => {
             <Mail className="text-blue-600" /> ctemesgen85@gmail.com
           </p>
           <p className="flex items-center justify-center gap-2">
-            <Phone className="text-blue-600" /> +251 9XX XXX XXX
+            <Phone className="text-blue-600" /> +251 960 416 208
           </p>
           <p className="flex items-center justify-center gap-2">
             <MapPin className="text-blue-600" /> Adama, Ethiopia
@@ -39,9 +40,9 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-col gap-4 w-full md:w-1/2"
         >
-          <input type="text" placeholder="Your Name" className="p-3 rounded-lg border dark:bg-gray-800" />
-          <input type="email" placeholder="Your Email" className="p-3 rounded-lg border dark:bg-gray-800" />
-          <textarea placeholder="Your Message" className="p-3 rounded-lg border h-32 dark:bg-gray-800" />
+          <input type="text" placeholder="Your Name" className="p-3 rounded-lg border text-amber-50 dark:bg-gray-800" />
+          <input type="email" placeholder="Your Email" className="p-3 rounded-lg border text-amber-50 dark:bg-gray-800" />
+          <textarea placeholder="Your Message" className="p-3 rounded-lg border h-32 text-amber-50 dark:bg-gray-800" />
           <button className="bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
             Send Message
           </button>
